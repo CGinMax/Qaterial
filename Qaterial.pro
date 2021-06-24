@@ -42,7 +42,12 @@ INCLUDEPATH += $$PWD/include
 #    PRE_TARGETDEPS += $$copy_qmltypes.target
 #}
 unix {
-    system(cp -r $$PWD/qml/* $$OUT_PWD/)
+    QMAKE_POST_LINK += $$quote(cp -r $$PWD/qml/* $$OUT_PWD/)
+#    system(cp -r $$PWD/qml/* $$OUT_PWD/)
+}
+
+win32 {
+    QMAKE_POST_LINK += $$quote(cmd /c copy /y $$PWD\\qml $$OUT_PWD\\)
 }
 
 qmldir.files = qml/qmldir
