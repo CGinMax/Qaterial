@@ -8,7 +8,7 @@
 ###############
 
 module Qaterial
-
+typeinfo plugins.qmltypes
 ###############
 #   DEPENDS   #
 ###############

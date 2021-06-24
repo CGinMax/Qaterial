@@ -6,8 +6,8 @@ cmake_minimum_required(VERSION 3.14.0 FATAL_ERROR)
 
 # ───── DEPENDENCIES ─────
 
-set(SPDLOG_REPOSITORY "https://github.com/gabime/spdlog" CACHE STRING "Repository of spdlog")
-set(SPDLOG_TAG "v1.x" CACHE STRING "Git tag/branch of spdlog")
+#set(SPDLOG_REPOSITORY "https://github.com/gabime/spdlog" CACHE STRING "Repository of spdlog")
+#set(SPDLOG_TAG "v1.x" CACHE STRING "Git tag/branch of spdlog")
 
 set(QTSTATICCMAKE_REPOSITORY "https://github.com/OlivierLDff/QtStaticCMake.git" CACHE STRING "QtStaticCMake repository, can be a local URL")
 set(QTSTATICCMAKE_TAG "master" CACHE STRING "QtStaticCMake git tag")
@@ -66,12 +66,12 @@ find_package(Qt5QuickCompiler   CONFIG REQUIRED NO_CMAKE_SYSTEM_PATH)
 include(FetchContent)
 
 # spdlog
-FetchContent_Declare(
-  spdlog
-  GIT_REPOSITORY ${SPDLOG_REPOSITORY}
-  GIT_TAG        ${SPDLOG_TAG}
-  GIT_SHALLOW    1
-  )
+#FetchContent_Declare(
+#  spdlog
+#  GIT_REPOSITORY ${SPDLOG_REPOSITORY}
+#  GIT_TAG        ${SPDLOG_TAG}
+#  GIT_SHALLOW    1
+#  )
 
 # QtStaticCMake
 FetchContent_Declare(
@@ -80,9 +80,15 @@ FetchContent_Declare(
   GIT_TAG        ${QTSTATICCMAKE_TAG}
   )
 
-FetchContent_MakeAvailable(spdlog)
+#FetchContent_MakeAvailable(spdlog)
 
 # ───── QML SOURCES ─────
+
+
+# copy qmldir qmltypes file
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/qml/qmldir DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/qml/plugins.qmltypes DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
 
 file(GLOB_RECURSE QATERIAL_QML_SRCS qml/*.qml)
 
@@ -91,6 +97,8 @@ foreach(SOURCE IN ITEMS ${QATERIAL_QML_SRCS})
   file(RELATIVE_PATH SOURCE_PATH_REL ${CMAKE_CURRENT_SOURCE_DIR}/qml "${SOURCE_PATH}")
   string(REPLACE "/" "\\" GROUP_PATH "${SOURCE_PATH_REL}")
   source_group("Qml\\${GROUP_PATH}" FILES "${SOURCE}")
+  # copy qml file to output dir
+  file(COPY ${SOURCE} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 endforeach()
 
 # Add qml to the qtquick compiler
@@ -110,11 +118,11 @@ set(QATERIAL_UTILS_SRCS
   ${CMAKE_CURRENT_SOURCE_DIR}/include/Qaterial/Export.hpp
   ${CMAKE_CURRENT_SOURCE_DIR}/include/Qaterial/Version.hpp
   ${CMAKE_CURRENT_SOURCE_DIR}/include/Qaterial/Utils.hpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/include/Qaterial/Logger.hpp
+#  ${CMAKE_CURRENT_SOURCE_DIR}/include/Qaterial/Logger.hpp
 
   ${CMAKE_CURRENT_SOURCE_DIR}/src/Version.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/Utils.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/Logger.cpp
+#  ${CMAKE_CURRENT_SOURCE_DIR}/src/Logger.cpp
   )
 
 set(QATERIAL_SRCS
@@ -140,7 +148,7 @@ endif()
 target_compile_features(${QATERIAL_TARGET}    PUBLIC cxx_std_11)
 target_include_directories(${QATERIAL_TARGET} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_link_libraries(${QATERIAL_TARGET}      PUBLIC
-  spdlog
+#  spdlog
   Qt5::Core
   Qt5::Gui
   Qt5::Svg
