@@ -36,6 +36,8 @@ T.ComboBox
   property double elevation: flat ? _control.pressed || _control.hovered ? 2 : 0 : _control.pressed ? 8 : 2
                                 Material.background: flat ? "transparent" : undefined
   property color foregroundColor: flat ? undefined : Material.primaryTextColor
+                                property color backgroundColor: _control.Material.dialogColor
+                                property color borderColor: "transparent"
 
   delegate: MenuItem
   {
@@ -83,7 +85,8 @@ T.ComboBox
     implicitHeight: _control.Material.buttonHeight
 
     radius: _control.flat ? 0 : 2
-    color: !_control.editable ? _control.Material.dialogColor : "transparent"
+    border.color: _control.borderColor
+    color: !_control.editable ? _control.backgroundColor : "transparent"
 
     layer.enabled: _control.enabled && !_control.editable && _control.Material.background.a > 0
     layer.effect: ElevationEffect
@@ -98,26 +101,6 @@ T.ComboBox
       width: parent.width
       height: _control.activeFocus ? 2 : 1
       color: _control.editable && _control.activeFocus ? _control.Material.accentColor : _control.Material.hintTextColor
-    } // Rectangle
-
-    Rectangle
-    {
-      height: 2 //_control.backgroundBorderHeight
-      color: "red" //_control.backgroundHighlightColor
-      width: _control.activeFocus ? parent.width : 0
-      x: _control.activeFocus ? 0 : parent.width/2
-
-      Behavior on width
-      {
-        enabled: !_control.activeFocus
-        NumberAnimation { easing.type:Easing.OutCubic; duration: 300 } // NumberAnimation
-      } // Behavior
-
-      Behavior on x
-      {
-        enabled: !_control.activeFocus
-        NumberAnimation { easing.type:Easing.OutCubic; duration: 300 } // NumberAnimation
-      } // Behavior
     } // Rectangle
 
     Ripple
