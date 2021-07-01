@@ -1,10 +1,6 @@
 <RCC>
     <qresource prefix="/Qaterial">
-
-        <!-- QMLDIR -->
         <file>qmldir</file>
-
-        <!-- CORE -->
         <file>ColorIcon.qml</file>
         <file>IconLabel.qml</file>
         <file>Ripple.qml</file>
@@ -13,17 +9,12 @@
         <file>DebugObject.qml</file>
         <file>RoundImage.qml</file>
         <file>ErrorSequentialAnimation.qml</file>
-
-        <!-- CONTAINERS -->
         <file>ScrollablePage.qml</file>
         <file>ZoomableFlickable.qml</file>
         <file>CheckableListView.qml</file>
         <file>CheckableListViewDelegate.qml</file>
-
         <file>SplitView.qml</file>
         <file>StackView.qml</file>
-
-        <!-- FONTS -->
         <file>Fonts/roboto/Roboto-Black.ttf</file>
         <file>Fonts/roboto/Roboto-BlackItalic.ttf</file>
         <file>Fonts/roboto/Roboto-Bold.ttf</file>
@@ -36,12 +27,8 @@
         <file>Fonts/roboto/Roboto-Regular.ttf</file>
         <file>Fonts/roboto/Roboto-Thin.ttf</file>
         <file>Fonts/roboto/Roboto-ThinItalic.ttf</file>
-
-        <!-- STYLES -->
         <file>Style.qml</file>
         <file>StyleSettingsDialog.qml</file>
-
-        <!-- COMPONENTS -->
         <file>Images/menu-down.svg</file>
         <file>Images/menu-left.svg</file>
         <file>Images/menu-right.svg</file>
@@ -54,11 +41,7 @@
         <file>Images/eye-off.svg</file>
         <file>Images/radiobox-blank.svg</file>
         <file>Images/radiobox-marked.svg</file>
-
-        <!-- COMPONENTS / CORE -->
         <file>RoundColorIcon.qml</file>
-
-        <!-- COMPONENTS / CONTAINERS -->
         <file>ApplicationWindow.qml</file>
         <file>Page.qml</file>
         <file>Pane.qml</file>
@@ -69,8 +52,6 @@
         <file>ScrollView.qml</file>
         <file>SwipeView.qml</file>
         <file>DoublePage.qml</file>
-
-        <!-- COMPONENTS / CARDS -->
         <file>Card.qml</file>
         <file>ElevatedCard.qml</file>
         <file>OutlinedCard.qml</file>
@@ -80,37 +61,25 @@
         <file>CardSupportingText.qml</file>
         <file>CardTitle.qml</file>
         <file>CardRoundThumbnailTitle.qml</file>
-
-        <!-- COMPONENTS / BANNERS -->
         <file>Banner.qml</file>
         <file>Snackbar.qml</file>
         <file>SnackbarLoader.qml</file>
         <file>SnackbarManager.qml</file>
-
-        <!-- COMPONENTS / APP BAR -->
         <file>ToolBar.qml</file>
-
-        <!-- COMPONENTS / MENU -->
         <file>Menu.qml</file>
         <file>MenuBar.qml</file>
         <file>MenuBarItem.qml</file>
         <file>MenuItem.qml</file>
         <file>MenuSeparator.qml</file>
         <file>RadioMenuItem.qml</file>
-
-        <!-- COMPONENTS / BUTTONS -->
         <file>FlatButton.qml</file>
         <file>OutlineButton.qml</file>
         <file>RaisedButton.qml</file>
         <file>Button.qml</file>
         <file>RawMaterialButton.qml</file>
-
-        <!-- COMPONENTS / CONTROL BUTTONS -->
         <file>SwitchButton.qml</file>
         <file>CheckButton.qml</file>
         <file>RadioButton.qml</file>
-
-        <!-- COMPONENTS / FAB -->
         <file>FabIconLabel.qml</file>
         <file>FabButton.qml</file>
         <file>ExtendedFabButton.qml</file>
@@ -121,8 +90,6 @@
         <file>OutlinedFabButton.qml</file>
         <file>MiniOutlinedFabButton.qml</file>
         <file>ScalableOutlinedFabButton.qml</file>
-
-        <!-- COMPONENTS / ICON BUTONS -->
         <file>ToolButton.qml</file>
         <file>AppBarButton.qml</file>
         <file>RoundButton.qml</file>
@@ -130,18 +97,12 @@
         <file>ToggleButton.qml</file>
         <file>ToolSeparator.qml</file>
         <file>ToggleSeparator.qml</file>
-
-        <!-- COMPONENTS / TEXT -->
         <file>Label.qml</file>
-
-        <!-- COMPONENTS / TAB -->
         <file>TabBar.qml</file>
         <file>TabButton.qml</file>
         <file>FixedTabBar.qml</file>
         <file>ScrollableTabBar.qml</file>
         <file>ClusturedTabBar.qml</file>
-
-        <!-- COMPONENTS / DELEGATES -->
         <file>ListDelegateText.qml</file>
         <file>ListDelegateContent.qml</file>
         <file>ListDelegateBackground.qml</file>
@@ -156,8 +117,6 @@
         <file>SwipeDelegate.qml</file>
         <file>TextFieldDelegate.qml</file>
         <file>EnumDelegate.qml</file>
-
-        <!-- COMPONENTS / DIALOG -->
         <file>Dialog.qml</file>
         <file>DialogButtonBox.qml</file>
         <file>ModalDialog.qml</file>
@@ -173,8 +132,6 @@
         <file>ProgressBarDialog.qml</file>
         <file>DoubleProgressBarDialog.qml</file>
         <file>ToolTip.qml</file>
-
-        <!-- COMPONENTS / TEXT FIELD -->
         <file>CursorDelegate.qml</file>
         <file>PlaceholderText.qml</file>
         <file>TextField.qml</file>
@@ -191,27 +148,19 @@
         <file>TextAreaScrollBar.qml</file>
         <file>ScrollableTextArea.qml</file>
         <file>ComboBox.qml</file>
-
-        <!-- COMPONENTS / SEPARATOR -->
         <file>HorizontalLineSeparator.qml</file>
         <file>VerticalLineSeparator.qml</file>
-
-        <!-- COMPONENTS / NAVIGATION -->
         <file>Drawer.qml</file>
-
-        <!-- COMPONENTS / LOADING -->
         <file>BusyIndicator.qml</file>
         <file>ProgressBar.qml</file>
-
-        <!-- COMPONENTS / FADER -->
         <file>Fader.qml</file>
-
-        <!-- COMPONENTS / SLIDERS -->
         <file>Slider.qml</file>
         <file>RangeSlider.qml</file>
         <file>SliderHandle.qml</file>
         <file>SliderDelegate.qml</file>
         <file>RangeSliderDelegate.qml</file>
-
+        <file>Expandable.qml</file>
+        <file>TreeView.qml</file>
+        <file>TreeViewItem.qml</file>
     </qresource>
 </RCC>
