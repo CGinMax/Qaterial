@@ -91,7 +91,7 @@ Item
   {
     id: _evaluateDelegateClipperHeight
     interval: 0
-    onTriggered: () => root.evaluateDelegateClipperHeight()
+    onTriggered: { root.evaluateDelegateClipperHeight()}
   }
 
   Connections
@@ -147,7 +147,7 @@ Item
     Timer
     {
       id: _delayDestroyTimer
-      onTriggered: () => _delegateLoader.active = false
+      onTriggered: { _delegateLoader.active = false}
     } // Timer
 
     // Load the 'delegate'
