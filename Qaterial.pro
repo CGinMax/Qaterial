@@ -47,7 +47,9 @@ unix {
 }
 
 win32 {
-    QMAKE_POST_LINK += $$quote(cmd /c copy /y $$PWD\\qml $$OUT_PWD\\)
+DEFINES +=
+QML_DIR=$$PWD/qml
+    QMAKE_POST_LINK += $$quote(cmd /c copy /y $$replace(QML_DIR, /, \\) $$replace($$OUT_PWD, /, \\))
 }
 
 qmldir.files = qml/qmldir

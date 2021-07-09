@@ -1,4 +1,4 @@
-#ifndef __QATERIAL_UTILS_HPP__
+﻿#ifndef __QATERIAL_UTILS_HPP__
 #define __QATERIAL_UTILS_HPP__
 
 // ─────────────────────────────────────────────────────────────
@@ -23,7 +23,7 @@ namespace qaterial {
 
 /**
  */
-class QATERIAL_API_ Utils
+class Q_DECL_EXPORT Utils
 {
 public:
     /**
